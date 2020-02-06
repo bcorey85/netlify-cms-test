@@ -7,10 +7,10 @@ collections:
   - name: blog
     label: Blog
     folder: blog
-    slug: "{{year}}-{{slug}}"
+    slug: "{{month}}-{{day}}-{{year}}-{{slug}}"
     create: true
     fields: 
-      - { name: path, label: Path, widget: string}
+      - { name: path, label: Path, widget: string, default: "/blog/{{slug}}", required: false}
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title, widget: string }
       - { name: body, label: Body, widget: markdown }

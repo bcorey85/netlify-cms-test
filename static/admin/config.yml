@@ -7,7 +7,7 @@ collections:
   - name: blog
     label: Blog
     folder: blog
-    slug: {{slug}}
+    slug: "{{year}}-{{slug}}"
     create: true
     fields: 
       - { name: path, label: Path, widget: string}

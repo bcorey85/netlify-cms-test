@@ -5,5 +5,22 @@
  */
 
 module.exports = {
-	plugins: [ `gatsby-plugin-netlify-cms` ]
+	plugins: [
+		`gatsby-plugin-netlify-cms`,
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `blog`,
+				path: `${__dirname}/blog`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `markdown-pages`,
+				path: `${__dirname}/src/markdown-pages`
+			}
+		},
+		`gatsby-transformer-remark`
+	]
 };

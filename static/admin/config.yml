@@ -9,10 +9,11 @@ collections:
     folder: blog
     create: true
     fields: 
-      - { name: path, label: Path}
+      - { name: path, label: Path, widget: string}
       - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: string }
       - { name: body, label: Body, widget: markdown }
+      - { name: image, label: Image, widget: image}
   - name: event 
     label: Event
     folder: event
